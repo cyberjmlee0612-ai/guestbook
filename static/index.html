@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>우리의 방명록</title>
+  <link rel="stylesheet" href="/static/styles.css">
+  <script src="/static/app.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <p class="eyebrow">SMALL HELLO</p>
+      <h1>우리의 방명록</h1>
+      <p>짧은 인사와 따뜻한 마음을 남겨 주세요.</p>
+    </header>
+
+    <section class="card" aria-labelledby="write-title">
+      <h2 id="write-title">방명록 남기기</h2>
+      <form id="entry-form">
+        <label>이름 <input id="name" name="name" maxlength="40" required></label>
+        <label>메시지 <textarea id="message" name="message" maxlength="500" rows="4" required></textarea></label>
+        <button type="submit">남기기</button>
+        <p id="form-status" class="status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section aria-labelledby="list-title">
+      <div class="section-heading">
+        <h2 id="list-title">남겨진 이야기</h2>
+        <button id="refresh-button" class="secondary" type="button">새로고침</button>
+      </div>
+      <div id="entries" class="entries" aria-live="polite">불러오는 중...</div>
+    </section>
+  </main>
+</body>
+</html>

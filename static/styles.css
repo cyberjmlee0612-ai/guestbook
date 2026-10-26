@@ -1,0 +1,26 @@
+:root { color-scheme: light; --ink: #243a35; --muted: #6c7d76; --green: #27735b; --paper: #f5f7f2; --line: #dce6df; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: "Malgun Gothic", system-ui, sans-serif; line-height: 1.6; }
+.page { max-width: 720px; margin: 0 auto; padding: 48px 20px 72px; }
+.hero { padding: 24px 0 30px; }
+.eyebrow { color: var(--green); font-size: 12px; font-weight: 800; letter-spacing: 3px; margin: 0 0 10px; }
+h1 { font-size: clamp(32px, 8vw, 56px); letter-spacing: -3px; line-height: 1.1; margin: 0 0 12px; }
+h2 { font-size: 21px; margin: 0 0 18px; }
+.hero p:last-child { color: var(--muted); margin: 0; }
+.card, .entry { background: white; border: 1px solid var(--line); border-radius: 16px; padding: 22px; }
+.card { margin-bottom: 38px; }
+label { display: block; font-size: 13px; font-weight: 700; margin-top: 14px; }
+input, textarea { width: 100%; border: 1px solid #cbd8d0; border-radius: 9px; font: inherit; margin-top: 6px; padding: 11px; resize: vertical; }
+input:focus, textarea:focus { outline: 2px solid var(--green); outline-offset: 2px; }
+button { border: 1px solid var(--green); border-radius: 8px; background: var(--green); color: white; cursor: pointer; font: inherit; font-weight: 700; padding: 10px 16px; margin-top: 16px; }
+button:hover { filter: brightness(.92); }
+.secondary { background: transparent; color: var(--green); margin: 0; }
+.status { min-height: 24px; font-size: 13px; margin: 10px 0 0; }
+.status.success { color: #287346; }.status.error { color: #a33b31; }
+.section-heading, .entry-heading { align-items: center; display: flex; justify-content: space-between; gap: 12px; }
+.entries { display: grid; gap: 12px; }
+.entry { position: relative; }
+.entry-heading strong { font-size: 16px; }.entry-heading time { color: var(--muted); font-size: 12px; }
+.entry p { white-space: pre-wrap; margin: 12px 0 0; overflow-wrap: anywhere; }
+.delete-button { background: transparent; border-color: #d5ddd7; color: var(--muted); font-size: 12px; padding: 5px 9px; position: absolute; right: 18px; bottom: 16px; margin: 0; }
+@media (max-width: 500px) { .page { padding-top: 26px; } .entry-heading { align-items: flex-start; flex-direction: column; gap: 2px; } }
